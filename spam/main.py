@@ -4,15 +4,14 @@ import time
 time.sleep(10)
 
 # Define a mensagem desejada
-mensagem = "Bom dia seven"
+mensagem = "bom dia"
 
 
 tempo_inicial = time.time()
 
-# Define a duração total em segundos que você deseja enviar a mensagem
-duracao_total = 60
+# Duração de tempo da mensagem
+duracao_total = 10
 
-# Loop enquanto o tempo atual menos o tempo inicial for menor que a duração total
 while (time.time() - tempo_inicial) < duracao_total:
 
     pyautogui.write(mensagem)
