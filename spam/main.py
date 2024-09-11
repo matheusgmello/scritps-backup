@@ -6,7 +6,6 @@ time.sleep(10)
 # Define a mensagem desejada
 mensagem = "bom dia"
 
-
 tempo_inicial = time.time()
 
 # Duração de tempo da mensagem
