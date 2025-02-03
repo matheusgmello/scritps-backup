@@ -4,10 +4,10 @@ function shutdown() {
 
   exec('shutdown /s /f /t 0', (error, stdout, stderr) => {
     if (error) {
-      console.error(`Erro ao tentar desligar o computador: ${error}`);
+      console.error(`Erro ao tentar desligar essa buceta: ${error}`);
       return;
     }
-    console.log('Desligando o computador...');
+    console.log('DESLIGA ESSA MERDA');
   });
 }
 
@@ -16,6 +16,6 @@ function scheduleShutdown(seconds) {
   setTimeout(shutdown, seconds * 1000);
 }
 
-// Defina o tempo em segundos
-const tempoEmSegundos = 60; // 3600 = 1 hora
+// COLOCA O TEMPO EM SEGUNDOS CABECAO
+const tempoEmSegundos = 1070; // 3600 = 1 hora
 scheduleShutdown(tempoEmSegundos);
