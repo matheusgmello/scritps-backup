@@ -9,7 +9,7 @@ def simulate_key_press():
     pyautogui.keyUp('a')
 
 # COLOCA EM MINUTOS
-duration_minutes = 30
+duration_minutes = 200
 duration_seconds = duration_minutes * 60
 
 start_time = time.time()
