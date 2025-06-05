@@ -1,21 +1,22 @@
 const { exec } = require('child_process');
 
 function shutdown() {
-
   exec('shutdown /s /f /t 0', (error, stdout, stderr) => {
     if (error) {
-      console.error(`Erro ao tentar desligar o caralho do pc: ${error}`);
+      console.error(`Erro ao tentar desligar o PC: ${error}`);
       return;
     }
-    console.log('Vamo funciona desliga');
+    console.log('Desligamento iniciado!');
   });
 }
 
-function scheduleShutdown(seconds) {
-  console.log(`O pc vai ser desligado em ${seconds} segundos.`);
+function scheduleShutdown(hours) {
+  const minutes = hours * 60; // Converte horas para minutos
+  const seconds = minutes * 60; // Converte minutos para segundos
+  console.log(`O PC vai ser desligado em ${hours} horas (${minutes} minutos ou ${seconds} segundos).`);
   setTimeout(shutdown, seconds * 1000);
 }
 
-// COLOCA O TEMPO EM SEGUNDOS CABECAO
-const tempoEmSegundos = 1070; // 3600 = 1 hora
-scheduleShutdown(tempoEmSegundos);
+// COLOQUE O TEMPO EM HORAS AQUI
+const tempoEmHoras = 1; // Exemplo: 1 hora
+scheduleShutdown(tempoEmHoras);
